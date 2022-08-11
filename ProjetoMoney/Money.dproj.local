@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/03/28 13:05:36.000.164,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoMoney\ULogin.fmx=C:\Users\Eduardo\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2022/03/28 13:05:44.000.976,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoMoney\Money.dproj=C:\Users\Eduardo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/03/29 15:05:37.000.424,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoMoney\UPrincipal.fmx=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoMoney\Unit1.fmx</Transaction>
+    <Transaction>2022/05/06 09:35:05.000.399,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoMoney\ULancamentos.fmx=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoMoney\Unit1.fmx</Transaction>
+    <Transaction>2022/05/09 17:07:52.000.920,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoMoney\Unit1.pas=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoMoney\ULancamentosCad.pas</Transaction>
+    <Transaction>2022/05/09 17:07:52.000.920,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoMoney\Unit1.fmx=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoMoney\ULancamentosCad.fmx</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android="CQ3000V9BZ" Android64="CQ3000V9BZ"/>
+	</ActiveMobileDevice>
+</BorlandProject>

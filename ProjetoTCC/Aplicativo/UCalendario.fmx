@@ -1,0 +1,132 @@
+object FrmCalendario: TFrmCalendario
+  Left = 0
+  Top = 0
+  Caption = 'Calendario'
+  ClientHeight = 700
+  ClientWidth = 400
+  Fill.Color = claSlateblue
+  Fill.Kind = Solid
+  Position = OwnerFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object Layout3: TLayout
+    Align = Top
+    Size.Width = 400.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object ImgVolta: TImage
+      MultiResBitmap.Height = 64
+      MultiResBitmap.Width = 64
+      MultiResBitmap = <
+        item
+          Width = 64
+          Height = 64
+          PNG = {
+            89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+            DE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            02E349444154785EEDDA4D6B13411807F06766B2DD7812DFBE82375F0F128F49
+            10A4B5F603A83512AD3D7911AADF4004C56BA915AD7AD7AA15C5A4E0C9B3AF88
+            A077DF1114B29BEC8C79EA933D74BBC96EB2E06432BF4B661F42E9FFDFDDC966
+            295896655996655996359218BD666A6169652763F22A78ACDC549E74F26335A5
+            F8DCCCC9890FF4166D645EC0C2CD477B4140ADFD83B7D1688D07C18F9C740ECC
+            56C63FD2480B9C5E3311171EB920B6722E2FD1A136322BA05BF80E0FE0302DB5
+            91490149C223D1F0323DE3B230F02F84E17D11D47B854722EF3CA5A536062AA0
+            131EAF6F1AC5F2257C9681739E0EB5D1FEC3F5274D78F0D517EE8A62F5C4F83B
+            9A68A3AF024C098F525F028B4B8FF799121EA52A00C33758B39634BCCAC992CE
+            E151E24BA09FF03395A9B734D196A0D7AED2846F41EB2B633014E151CF3360FE
+            CE83FD2DA59E250D2F242B0E4B78D4B5000C2F7CBF064E7E0B8D6261780744E9
+            F4F4E41B1A0D85D80246213CDAB08034E175D76C787FC498BB0A4ACE9D3D75F4
+            3D8D439102F06186CF5A2F12EDF6C344C95F5242617D0991FB00C5D435E3C223
+            C63773CE2FD351285200F7A0484BF34828D12A1429A0E1367B7E349A2452401E
+            9CE7B4348E6250A36528BA0728764E017CA74373341B3F81B10B74148A14808F
+            AE05A8B2312504F05B49B8AF729B0A1B3D968FBDDE6FDC7EB8270096E851D7DA
+            FD3F77CAB3C7275ED3686874DDF046A1849E3BBEE92544F680F5AAD3932F990C
+            4A49F6841CE47628D9ACCFDF5DD94523EDF53C033AAEDF5ADEADB85835ED4C48
+            5C0032B1845405202C0194A88380ED348A350C25A42E009954425F0520534AE8
+            BB0094BA043976D0A8FF0F3853997A052C28B76F37BFD128167E44729057E850
+            1B031580B084C061A52425B47CEF102DB531700108AFED2425047957D2521B99
+            14809294E0023CA1A536322B00754AC00D8F4621BC9516022ED2A136322D0061
+            09B8DBB7232FE32369FC3EDE1EDF631014AAC78E7CFAF72ECBB22CCBB22CCBB2
+            ACFF09E02F8B495E9A647F57CE0000000049454E44AE426082}
+          FileName = 'E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoMoney\Images\back.png'
+        end>
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      OnClick = ImgVoltaClick
+    end
+  end
+  object Layout1: TLayout
+    Align = Top
+    Position.Y = 50.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 280.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object Calendar: TCalendar
+      Align = Top
+      Date = 44696.000000000000000000
+      Size.Width = 400.000000000000000000
+      Size.Height = 273.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      OnChange = CalendarChange
+    end
+  end
+  object Layout2: TLayout
+    Align = Top
+    Position.Y = 330.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 287.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object LvHorarios: TListView
+      ItemAppearanceClassName = 'TDynamicAppearance'
+      ItemEditAppearanceClassName = 'TDynamicAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Client
+      Size.Width = 400.000000000000000000
+      Size.Height = 287.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+        item
+          AppearanceObjectName = 'TxtHorario'
+          AppearanceClassName = 'TTextObjectAppearance'
+          Appearance.TextAlign = Leading
+          Appearance.Width = 239.000000000000000000
+          Appearance.Height = 43.000000000000000000
+        end
+        item
+          AppearanceObjectName = 'TxtID'
+          AppearanceClassName = 'TTextObjectAppearance'
+          Appearance.Width = 65.000000000000000000
+          Appearance.Height = 44.000000000000000000
+          Appearance.Visible = False
+          Appearance.PlaceOffset.X = 310.000000000000000000
+        end>
+      ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+        item
+          AppearanceObjectName = 'Text1'
+          AppearanceClassName = 'TTextObjectAppearance'
+        end>
+      OnItemClick = LvHorariosItemClick
+    end
+  end
+  object QryDataEntrega: TFDQuery
+    Connection = DM.Conn
+    Left = 80
+    Top = 8
+  end
+  object QryHoraEntrega: TFDQuery
+    Connection = DM.Conn
+    Left = 176
+    Top = 16
+  end
+end

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/04/12 20:56:27.000.881,=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas</Transaction>
+    <Transaction>2022/04/12 20:56:51.000.535,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UConVarUva.pas</Transaction>
+    <Transaction>2022/04/12 20:56:51.000.535,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.dfm=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UConVarUva.dfm</Transaction>
+    <Transaction>2022/04/12 21:02:24.000.997,=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas</Transaction>
+    <Transaction>2022/04/12 21:02:51.000.989,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.dfm=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UCadVarUva.dfm</Transaction>
+    <Transaction>2022/04/12 21:02:51.000.989,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UCadVarUva.pas</Transaction>
+    <Transaction>2022/04/12 22:13:31.000.415,=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas</Transaction>
+    <Transaction>2022/04/12 22:13:43.000.248,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UCadDatas.dfm=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.dfm</Transaction>
+    <Transaction>2022/04/12 22:13:43.000.248,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UCadDatas.pas=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas</Transaction>
+    <Transaction>2022/04/12 22:21:48.000.929,=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas</Transaction>
+    <Transaction>2022/04/12 22:22:25.000.796,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UConData.pas=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UCadDatas.pas</Transaction>
+    <Transaction>2022/04/12 22:22:25.000.796,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UConData.dfm=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UCadDatas.dfm</Transaction>
+    <Transaction>2022/04/12 22:22:57.000.753,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UCadData.dfm=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.dfm</Transaction>
+    <Transaction>2022/04/12 22:22:57.000.753,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UCadData.pas=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas</Transaction>
+    <Transaction>2022/05/03 14:22:39.000.894,=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas</Transaction>
+    <Transaction>2022/05/03 14:22:58.000.975,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UConAgendamentos.pas</Transaction>
+    <Transaction>2022/05/03 14:22:58.000.976,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.dfm=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UConAgendamentos.dfm</Transaction>
+    <Transaction>2022/05/15 14:35:01.000.324,=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas</Transaction>
+    <Transaction>2022/05/15 14:35:22.000.170,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.dfm=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UCadHorEntrega.dfm</Transaction>
+    <Transaction>2022/05/15 14:35:22.000.170,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\UCadHorEntrega.pas</Transaction>
+    <Transaction>2022/05/15 15:29:20.000.608,=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas</Transaction>
+    <Transaction>2022/05/15 15:29:32.000.069,E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Unit1.pas=E:\PasiniDev\GitHub\ProjetosDelphi\ProjetoTCC\Gerencial\Units\UFuncoes.pas</Transaction>
+  </Transactions>
+</BorlandProject>

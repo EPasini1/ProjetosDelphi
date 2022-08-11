@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/08/05 09:35:59.296,=E:\PasDev\ProjetosDelphi\Unit1.pas</Transaction>
+    <Transaction>2022/08/05 09:36:24.360,E:\PasDev\ProjetosDelphi\ProjetoTCC\DataSnap\UPrincipal.dfm=E:\PasDev\ProjetosDelphi\Unit1.dfm</Transaction>
+    <Transaction>2022/08/05 09:36:24.360,E:\PasDev\ProjetosDelphi\ProjetoTCC\DataSnap\UPrincipal.pas=E:\PasDev\ProjetosDelphi\Unit1.pas</Transaction>
+    <Transaction>2022/08/05 09:36:29.998,E:\PasDev\ProjetosDelphi\ProjetoTCC\DataSnap\DataSnap.dproj=E:\PasDev\ProjetosDelphi\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
