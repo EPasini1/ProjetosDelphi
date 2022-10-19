@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.UI.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.FMXUI.Wait,
-  FireDAC.Comp.Client, FireDAC.Comp.DataSet;
+  FireDAC.Comp.Client, FireDAC.Comp.DataSet, FireDAC.Phys.FB, FireDAC.Phys.FBDef;
 
 type
   TDM = class(TDataModule)
@@ -45,14 +45,6 @@ begin
 //    Params.Values['Server']     := 'pasdevfb.jelastic.saveincloud.net';
 //    Params.Values['Port']       := '11145';
 //    Params.Values['Database']   := '/opt/firebird/data/DATABASE.FDB';
-
-//    Local
-//    Params.Values['DriverID']   := 'FB';
-//    Params.Values['User_Name']  := 'SYSDBA';
-//    Params.Values['Password']   := 'masterkey';
-//    Params.Values['Server']     := '10.0.0.100';
-//    Params.Values['Database']   := 'F:\Sistema\DATABASE.FDB';
-
 
     try
       Connected := True;
