@@ -124,4 +124,46 @@ object FrmConVarUva: TFrmConVarUva
     Left = 88
     Top = 152
   end
+  object FDQueryDataEntrega: TFDQuery
+    Connection = DM.Conn
+    SQL.Strings = (
+      
+        'select * from DATA_ENTREGA where DTE_EMP = :DTE_EMP and DTE_VARI' +
+        'EDADE_UVA = :DTE_VAR_UVA')
+    Left = 192
+    Top = 96
+    ParamData = <
+      item
+        Name = 'DTE_EMP'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'DTE_VAR_UVA'
+        DataType = ftInteger
+        ParamType = ptInput
+      end>
+    object FDQueryDataEntregaDTE_ID: TIntegerField
+      FieldName = 'DTE_ID'
+      Origin = 'DTE_ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQueryDataEntregaDTE_EMP: TIntegerField
+      FieldName = 'DTE_EMP'
+      Origin = 'DTE_EMP'
+    end
+    object FDQueryDataEntregaDTE_INI: TDateField
+      FieldName = 'DTE_INI'
+      Origin = 'DTE_INI'
+    end
+    object FDQueryDataEntregaDTE_FIM: TDateField
+      FieldName = 'DTE_FIM'
+      Origin = 'DTE_FIM'
+    end
+    object FDQueryDataEntregaDTE_VARIEDADE_UVA: TIntegerField
+      FieldName = 'DTE_VARIEDADE_UVA'
+      Origin = 'DTE_VARIEDADE_UVA'
+    end
+  end
 end

@@ -132,7 +132,7 @@ object FrmCadVarUva: TFrmCadVarUva
     Connection = DM.Conn
     Transaction = DM.Transaction
     SQL.Strings = (
-      'select coalesce(max(VDU_ID),0) + 1 from VARIEDADE_DE_UVA')
+      'select GEN_ID(gen_variedade_de_uva_id, 0) + 1 FROM RDB$DATABASE;')
     Left = 144
     Top = 16
   end

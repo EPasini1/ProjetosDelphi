@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls;
 
 type
   TFrmPrincipal = class(TForm)
@@ -17,6 +18,9 @@ type
     VariedadedeUva1: TMenuItem;
     DatadeEntrega1: TMenuItem;
     Agendamentos1: TMenuItem;
+    PanelFundo: TPanel;
+    Image1: TImage;
+    Image2: TImage;
     procedure Sair1Click(Sender: TObject);
     procedure Produtor1Click(Sender: TObject);
     procedure Empresa1Click(Sender: TObject);
@@ -59,6 +63,7 @@ begin
     Application.Createform(TFrmConEmpresa,FrmConEmpresa);
   FrmConEmpresa.Show;
 end;
+
 
 procedure TFrmPrincipal.Produtor1Click(Sender: TObject);
 begin

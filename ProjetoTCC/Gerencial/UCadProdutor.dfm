@@ -4,7 +4,7 @@ object FrmCadProdutor: TFrmCadProdutor
   BorderStyle = bsDialog
   Caption = 'Cadastro de Produtor'
   ClientHeight = 260
-  ClientWidth = 638
+  ClientWidth = 383
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,16 +21,16 @@ object FrmCadProdutor: TFrmCadProdutor
   object PnlBotoes: TPanel
     Left = 0
     Top = 214
-    Width = 638
+    Width = 383
     Height = 46
     Align = alBottom
     TabOrder = 1
-    ExplicitWidth = 382
+    ExplicitWidth = 638
     DesignSize = (
-      638
+      383
       46)
     object BtnFechar: TBitBtn
-      Left = 551
+      Left = 296
       Top = 10
       Width = 75
       Height = 25
@@ -38,7 +38,7 @@ object FrmCadProdutor: TFrmCadProdutor
       Caption = 'Fechar'
       TabOrder = 0
       OnClick = BtnFecharClick
-      ExplicitLeft = 295
+      ExplicitLeft = 551
     end
     object BtnIncluir: TBitBtn
       Left = 214
@@ -64,11 +64,11 @@ object FrmCadProdutor: TFrmCadProdutor
   object PnlCadastro: TPanel
     Left = 0
     Top = 0
-    Width = 638
+    Width = 383
     Height = 214
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 382
+    ExplicitWidth = 638
     object Label1: TLabel
       Left = 16
       Top = 8
@@ -151,31 +151,31 @@ object FrmCadProdutor: TFrmCadProdutor
     Connection = DM.Conn
     SQL.Strings = (
       'select coalesce(max(PRO_ID),0) + 1 from produtor')
-    Left = 384
-    Top = 8
+    Left = 40
+    Top = 56
   end
   object QryEmpresa: TFDQuery
     Connection = DM.Conn
     SQL.Strings = (
       'select EMP_ID, EMP_FANTASIA from empresa')
-    Left = 384
-    Top = 56
+    Left = 40
+    Top = 104
   end
   object DSEmpresa: TDataSource
     DataSet = QryEmpresa
-    Left = 464
-    Top = 56
+    Left = 120
+    Top = 104
   end
   object QryOperacao: TFDQuery
     Connection = DM.Conn
     Transaction = TransProdutor
-    Left = 464
-    Top = 8
+    Left = 120
+    Top = 56
   end
   object TransProdutor: TFDTransaction
     Connection = DM.Conn
-    Left = 536
-    Top = 8
+    Left = 192
+    Top = 56
   end
   object QryDados: TFDQuery
     Connection = DM.Conn

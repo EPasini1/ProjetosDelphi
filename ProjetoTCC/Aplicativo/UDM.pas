@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.UI.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.FMXUI.Wait,
-  FireDAC.Comp.Client, FireDAC.Comp.DataSet, FireDAC.Phys.FB, FireDAC.Phys.FBDef;
+  FireDAC.Comp.Client, FireDAC.Comp.DataSet, FireDAC.Phys.FB, FireDAC.Phys.FBDef, System.MaskUtils;
 
 type
   TDM = class(TDataModule)
@@ -62,7 +62,7 @@ begin
     if not Connected then //Caso o componente ConLOGIN não esteja conectado ao BD
       Connected := True;
     Close;
-    Sql.Text := 'SELECT COUNT(1) FROM PRODUTOR ' + ' WHERE UPPER(PRO_CPF) = ' + QuotedStr(AnsiUpperCase(Trim(usuario))) + ' AND PRO_SENHA = ' + QuotedStr(Trim(senha));
+    Sql.Text := 'SELECT COUNT(1) FROM PRODUTOR ' + ' WHERE UPPER(PRO_CPF) = ' + QuotedStr(AnsiUpperCase(Trim(FormatMaskText('000\.000\.000\-00;0;',usuario)))) + ' AND PRO_SENHA = ' + QuotedStr(Trim(senha));
     Open;
     if Fields[0].AsInteger > 0 then
       SetCodUsuario(usuario, senha);
@@ -91,7 +91,7 @@ begin
     if not Connected then //Caso o componente ConLOGIN não esteja conectado ao BD
       Connected := True;
     Close;
-    Sql.Text := 'SELECT PRO_ID, PRO_EMP FROM PRODUTOR ' + ' WHERE UPPER(PRO_CPF) = ' + QuotedStr(AnsiUpperCase(Trim(usuario))) + ' AND PRO_SENHA = ' + QuotedStr(Trim(senha));
+    Sql.Text := 'SELECT PRO_ID, PRO_EMP FROM PRODUTOR ' + ' WHERE UPPER(PRO_CPF) = ' + QuotedStr(AnsiUpperCase(Trim(FormatMaskText('000\.000\.000\-00;0;',usuario)))) + ' AND PRO_SENHA = ' + QuotedStr(Trim(senha));
     Open;
     CodUsuario := Fields[0].AsInteger;
     EmpUsuario := Fields[1].AsInteger;

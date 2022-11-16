@@ -74,6 +74,7 @@ begin
       FrmCalendario.DTE_VAR_UVA := DM.QryAux.FieldByName('DTE_VARIEDADE_UVA').AsInteger;
       FrmCalendario.Calendar.OnChange := FrmCalendario.CalendarChange;
       FrmCalendario.Show;
+      close;
     end;
 end;
 

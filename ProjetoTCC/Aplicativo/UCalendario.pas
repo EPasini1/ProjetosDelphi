@@ -43,7 +43,7 @@ var
 implementation
 
 uses
-  UDM;
+  UDM, UPrincipal;
 
 {$R *.fmx}
 
@@ -148,11 +148,14 @@ begin
           ParamByName('AGP_DTE').AsInteger      := DTE_ID;
           ParamByName('AGP_HOE').AsInteger      := StrToInt(AItem.Objects.FindObjectT<TListItemText>('TxtID').Text);
           ParamByName('AGP_EMP').AsInteger      := DTE_EMP;
+
           ParamByName('AGP_VAR_UVA').AsInteger  := DTE_VAR_UVA;
           ParamByname('AGP_DIA').AsDateTime     := Calendar.Date;
           ExecSQL;
         end;
         CalendarChange(sender);
+        FrmPrincipal.GetAgendamentos();
+        close;
       end;
     end;
   end

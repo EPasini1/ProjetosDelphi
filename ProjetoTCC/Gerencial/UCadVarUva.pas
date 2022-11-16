@@ -64,6 +64,20 @@ end;
 
 procedure TFrmCadVarUva.BtnIncluirClick(Sender: TObject);
 begin
+  if Trim(EdtVariedade.Text) = '' then
+  begin
+    ShowMessage('Favor inserir um nome para a variedade!');
+    EdtVariedade.SetFocus;
+    Exit;
+  end;
+
+  if DBLkpEmpresaVarUva.Text = '' then
+  Begin
+    ShowMessage('Favor selecionar a empresa da variedade!');
+    DBLkpEmpresaVarUva.SetFocus;
+    Exit;
+  End;
+
   OPVarUva('I');
 end;
 

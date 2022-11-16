@@ -52,7 +52,7 @@ var
 implementation
 
 uses
-  UDM, UConEmpresa;
+  UDM, UConEmpresa, UFuncoes;
 
 {$R *.dfm}
 
@@ -68,6 +68,21 @@ end;
 
 procedure TFrmCadEmpresa.BtnIncluirClick(Sender: TObject);
 begin
+  if not isCNPJ(ClrDig(MkEdtCNPJEmpresa.Text))then
+  begin
+    ShowMessage('Favor inserir um CNPJ válido!');
+    MkEdtCNPJEmpresa.SetFocus;
+    exit;
+  end;
+
+  if Trim(EdtRazaoSocial.Text) = '' then
+  begin
+    ShowMessage('Favor inserir uma Razão Social!');
+    EdtRazaoSocial.SetFocus;
+    Exit;
+  end;
+
+
   OPEmpresa('I');
 end;
 

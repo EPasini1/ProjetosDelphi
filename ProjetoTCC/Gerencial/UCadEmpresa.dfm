@@ -145,7 +145,7 @@ object FrmCadEmpresa: TFrmCadEmpresa
   object QryCodEmpresa: TFDQuery
     Connection = DM.Conn
     SQL.Strings = (
-      'select coalesce(max(EMP_ID),0) + 1 from empresa')
+      'select GEN_ID(gen_empresa_id, 0) + 1 FROM RDB$DATABASE;')
     Left = 288
     Top = 24
   end

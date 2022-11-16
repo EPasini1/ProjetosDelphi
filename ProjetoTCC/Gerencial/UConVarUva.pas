@@ -25,6 +25,12 @@ type
     BtnAlterar: TBitBtn;
     BtnExcluir: TBitBtn;
     BtnHorEntrega: TBitBtn;
+    FDQueryDataEntrega: TFDQuery;
+    FDQueryDataEntregaDTE_ID: TIntegerField;
+    FDQueryDataEntregaDTE_EMP: TIntegerField;
+    FDQueryDataEntregaDTE_INI: TDateField;
+    FDQueryDataEntregaDTE_FIM: TDateField;
+    FDQueryDataEntregaDTE_VARIEDADE_UVA: TIntegerField;
     procedure BtnFecharClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BtnIncluirClick(Sender: TObject);
@@ -45,7 +51,7 @@ var
 implementation
 
 uses
-  UDM, UCadVarUva, UCadHorEntrega;
+  UDM, UCadVarUva, UCadHorEntrega, UConData;
 
 {$R *.dfm}
 
@@ -82,6 +88,26 @@ end;
 
 procedure TFrmConVarUva.BtnHorEntregaClick(Sender: TObject);
 begin
+  FDQueryDataEntrega.Close;
+  FDQueryDataEntrega.Params[0].AsInteger := QryTipoUva.FieldByName('VDU_EMP').AsInteger;
+  FDQueryDataEntrega.Params[1].AsInteger := QryTipoUva.FieldByName('VDU_ID').AsInteger;
+  FDQueryDataEntrega.Open;
+
+  if (FDQueryDataEntrega.RecordCount = 0) then
+  begin
+    if Application.MessageBox('Não há data de entrega cadastrada para esta variedeade,'
+      + #13#10 + 'gostaria de cadastrar agora?', 'Data de Entrega', MB_YESNO +
+      MB_ICONWARNING) = IDYES then
+    begin
+      if FrmConData = Nil then
+        Application.Createform(TFrmConData,FrmConData);
+      FrmConData.Show;
+      FrmConData.BtnIncluirClick(sender);
+      exit;
+    end else
+      exit;
+  end;
+
   if not Assigned(FrmCadHorEntrega) then
     Application.CreateForm(TFrmCadHorEntrega,FrmCadHorEntrega);
   FrmCadHorEntrega.DSE_VAR_UVA  := QryTipoUva.FieldByName('VDU_ID').AsInteger;
@@ -99,7 +125,7 @@ end;
 
 procedure TFrmConVarUva.DSTipoDeUvaDataChange(Sender: TObject; Field: TField);
 begin
-  if QryTipoUva.FieldByName('VDU_ID').AsInteger <> 0 then
+  if (QryTipoUva.FieldByName('VDU_ID').AsInteger <> 0) then
   begin
     BtnHorEntrega.Enabled := True;
   end;
