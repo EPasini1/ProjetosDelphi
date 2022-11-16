@@ -165,6 +165,7 @@ object FrmCadHorEntrega: TFrmCadHorEntrega
         TabOrder = 1
         ValueChecked = 'T'
         ValueUnchecked = 'F'
+        OnClick = DBCBSegClick
       end
       object DBCBQua: TDBCheckBox
         Left = 12
@@ -177,6 +178,7 @@ object FrmCadHorEntrega: TFrmCadHorEntrega
         TabOrder = 2
         ValueChecked = 'T'
         ValueUnchecked = 'F'
+        OnClick = DBCBSegClick
       end
       object DBCBQui: TDBCheckBox
         Left = 115
@@ -189,6 +191,7 @@ object FrmCadHorEntrega: TFrmCadHorEntrega
         TabOrder = 3
         ValueChecked = 'T'
         ValueUnchecked = 'F'
+        OnClick = DBCBSegClick
       end
       object DBCBSex: TDBCheckBox
         Left = 115
@@ -201,6 +204,7 @@ object FrmCadHorEntrega: TFrmCadHorEntrega
         TabOrder = 4
         ValueChecked = 'T'
         ValueUnchecked = 'F'
+        OnClick = DBCBSegClick
       end
       object DBCBSab: TDBCheckBox
         Left = 115
@@ -213,6 +217,7 @@ object FrmCadHorEntrega: TFrmCadHorEntrega
         TabOrder = 5
         ValueChecked = 'T'
         ValueUnchecked = 'F'
+        OnClick = DBCBSegClick
       end
       object DBCBDom: TDBCheckBox
         Left = 228

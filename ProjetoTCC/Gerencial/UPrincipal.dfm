@@ -25,10 +25,6 @@ object FrmPrincipal: TFrmPrincipal
     Color = 16443110
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 320
-    ExplicitTop = 88
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     DesignSize = (
       880
       557)
@@ -41327,25 +41323,25 @@ object FrmPrincipal: TFrmPrincipal
     Top = 120
     object Cadastro1: TMenuItem
       Caption = 'Cadastro'
-      object Agendamentos1: TMenuItem
-        Caption = 'Agendamentos'
-        OnClick = Agendamentos1Click
+      object Empresa1: TMenuItem
+        Caption = 'Empresa'
+        OnClick = Empresa1Click
+      end
+      object VariedadedeUva1: TMenuItem
+        Caption = 'Variedade de Uva'
+        OnClick = VariedadedeUva1Click
       end
       object DatadeEntrega1: TMenuItem
         Caption = 'Data de Entrega'
         OnClick = DatadeEntrega1Click
       end
-      object Empresa1: TMenuItem
-        Caption = 'Empresa'
-        OnClick = Empresa1Click
-      end
       object Produtor1: TMenuItem
         Caption = 'Produtor'
         OnClick = Produtor1Click
       end
-      object VariedadedeUva1: TMenuItem
-        Caption = 'Variedade de Uva'
-        OnClick = VariedadedeUva1Click
+      object Agendamentos1: TMenuItem
+        Caption = 'Agendamentos'
+        OnClick = Agendamentos1Click
       end
       object N1: TMenuItem
         Caption = '-'

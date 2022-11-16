@@ -265,15 +265,6 @@ end;
 
 procedure TFrmCadHorEntrega.FormCreate(Sender: TObject);
 begin
-  DBCBSeg.Checked := False;
-  DBCBTer.Checked := False;
-  DBCBQua.Checked := False;
-  DBCBSab.Checked := False;
-  DBCBSex.Checked := False;
-  DBCBQui.Checked := False;
-  DBCBDom.Checked := False;
-
-
   TPIntervalo.Time  := 0;
   TPSegInicio.Time  := 0;
   TPSegFim.Time     := 0;

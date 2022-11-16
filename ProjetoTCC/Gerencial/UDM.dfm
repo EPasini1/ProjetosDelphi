@@ -23,6 +23,8 @@ object DM: TDM
   end
   object QryAux: TFDQuery
     Connection = Conn
+    Transaction = Transaction
+    UpdateTransaction = Transaction
     Left = 32
     Top = 88
   end
