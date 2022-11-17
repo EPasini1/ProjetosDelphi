@@ -168,67 +168,99 @@ procedure TFrmCadHorEntrega.BtnOKClick(Sender: TObject);
   var
     i : integer;
   begin
+    ProgressBar1.Position := 0;
+    ProgressBar1.Max := ContaSelecionado;
     with DM.QryAux do begin
-      ProgressBar1.Position := 0;
-      ProgressBar1.Max := ContaSelecionado;
-      for I := 0 to ContaSelecionado -1 do
+      SQL.Clear;
+      SQL.Add('update or insert into HORARIOS_ENTREGA_EMPRESA (HEE_ID, HEE_EMP, HEE_DDS, HEE_DTE, HEE_VAR_UVA, HEE_INI, HEE_FIM, HEE_INT)'+#13+
+              'values (gen_id(GEN_HORARIOS_ENTREGA_EMPRESA_ID, 1), :HEE_EMP, :HEE_DDS, :HEE_DTE, :HEE_VAR_UVA, :HEE_INI, :HEE_FIM, :HEE_INT)'+#13+
+              'matching(HEE_EMP, HEE_DDS, HEE_DTE, HEE_VAR_UVA)');
+      if QryDiaSemanaEntregaDSE_SEG.Value = 'T' then
       begin
-        SQL.Clear;
-        SQL.Add('update or insert into HORARIOS_ENTREGA_EMPRESA (HEE_ID, HEE_EMP, HEE_DDS, HEE_DTE, HEE_VAR_UVA, HEE_INI, HEE_FIM, HEE_INT)'+#13+
-                'values (gen_id(GEN_HORARIOS_ENTREGA_EMPRESA_ID, 1), :HEE_EMP, :HEE_DDS, :HEE_DTE, :HEE_VAR_UVA, :HEE_INI, :HEE_FIM, :HEE_INT)'+#13+
-                'matching(HEE_EMP, HEE_DDS, HEE_DTE, HEE_VAR_UVA)');
-
         ParamByName('HEE_EMP').AsInteger          := DSE_EMP;
         ParamByName('HEE_VAR_UVA').AsInteger      := DSE_VAR_UVA;
         ParamByName('HEE_DTE').AsInteger          := DSE_ID;
         ParamByName('HEE_INT').AsDateTime         := TPIntervalo.Time;
-        if i = 0 then
-        begin
-          ParamByName('HEE_DDS').AsInteger           := 1;
-          ParamByName('HEE_INI').AsDateTime          := TPSegInicio.Time;
-          ParamByName('HEE_FIM').AsDateTime          := TPSegFim.Time;
-        end;
-        if i = 1 then
-        begin
-          ParamByName('HEE_DDS').AsInteger           := 2;
-          ParamByName('HEE_INI').AsDateTime          := TPTerInicio.Time;
-          ParamByName('HEE_FIM').AsDateTime          := TPTerFim.Time;
-        end;
-        if i = 2 then
-        begin
-          ParamByName('HEE_DDS').AsInteger           := 3;
-          ParamByName('HEE_INI').AsDateTime          := TPQuaInicio.Time;
-          ParamByName('HEE_FIM').AsDateTime          := TPQuaFim.Time;
-        end;
-        if i = 3 then
-        begin
-          ParamByName('HEE_DDS').AsInteger           := 4;
-          ParamByName('HEE_INI').AsDateTime          := TPQuiInicio.Time;
-          ParamByName('HEE_FIM').AsDateTime          := TPQuiFim.Time;
-        end;
-        if i = 4 then
-        begin
-          ParamByName('HEE_DDS').AsInteger           := 5;
-          ParamByName('HEE_INI').AsDateTime          := TPSexInicio.Time;
-          ParamByName('HEE_FIM').AsDateTime          := TPSexFim.Time;
-        end;
-        if i = 5 then
-        begin
-          ParamByName('HEE_DDS').AsInteger           := 6;
-          ParamByName('HEE_INI').AsDateTime          := TPSabInicio.Time;
-          ParamByName('HEE_FIM').AsDateTime          := TPSabFim.Time;
-        end;
-        if i = 6 then
-        begin
-          ParamByName('HEE_DDS').AsInteger           := 7;
-          ParamByName('HEE_INI').AsDateTime          := TPDomInicio.Time;
-          ParamByName('HEE_FIM').AsDateTime          := TPDomFim.Time;
-        end;
+        ParamByName('HEE_DDS').AsInteger           := 1;
+        ParamByName('HEE_INI').AsDateTime          := TPSegInicio.Time;
+        ParamByName('HEE_FIM').AsDateTime          := TPSegFim.Time;
         ExecSQL;
-        CadastraHorariosDeEntrega(DSE_EMP, i + 1, DSE_ID, DSE_VAR_UVA, ParamByName('HEE_INI').AsDateTime, ParamByName('HEE_FIM').AsDateTime );
-        ProgressBar1.Position := ProgressBar1.Position + 1;
-        Application.ProcessMessages;
+        CadastraHorariosDeEntrega(DSE_EMP, 1, DSE_ID, DSE_VAR_UVA, ParamByName('HEE_INI').AsDateTime, ParamByName('HEE_FIM').AsDateTime );
       end;
+      if QryDiaSemanaEntregaDSE_TER.Value = 'T' then
+      begin
+        ParamByName('HEE_EMP').AsInteger          := DSE_EMP;
+        ParamByName('HEE_VAR_UVA').AsInteger      := DSE_VAR_UVA;
+        ParamByName('HEE_DTE').AsInteger          := DSE_ID;
+        ParamByName('HEE_INT').AsDateTime         := TPIntervalo.Time;
+        ParamByName('HEE_DDS').AsInteger           := 2;
+        ParamByName('HEE_INI').AsDateTime          := TPTerInicio.Time;
+        ParamByName('HEE_FIM').AsDateTime          := TPTerFim.Time;
+        ExecSQL;
+        CadastraHorariosDeEntrega(DSE_EMP, 2, DSE_ID, DSE_VAR_UVA, ParamByName('HEE_INI').AsDateTime, ParamByName('HEE_FIM').AsDateTime );
+      end;
+      if QryDiaSemanaEntregaDSE_QUA.Value = 'T' then
+      begin
+        ParamByName('HEE_EMP').AsInteger          := DSE_EMP;
+        ParamByName('HEE_VAR_UVA').AsInteger      := DSE_VAR_UVA;
+        ParamByName('HEE_DTE').AsInteger          := DSE_ID;
+        ParamByName('HEE_INT').AsDateTime         := TPIntervalo.Time;
+        ParamByName('HEE_DDS').AsInteger           := 3;
+        ParamByName('HEE_INI').AsDateTime          := TPQuaInicio.Time;
+        ParamByName('HEE_FIM').AsDateTime          := TPQuaFim.Time;
+        ExecSQL;
+        CadastraHorariosDeEntrega(DSE_EMP, 3, DSE_ID, DSE_VAR_UVA, ParamByName('HEE_INI').AsDateTime, ParamByName('HEE_FIM').AsDateTime );
+      end;
+      if QryDiaSemanaEntregaDSE_QUI.Value = 'T' then
+      begin
+        ParamByName('HEE_EMP').AsInteger          := DSE_EMP;
+        ParamByName('HEE_VAR_UVA').AsInteger      := DSE_VAR_UVA;
+        ParamByName('HEE_DTE').AsInteger          := DSE_ID;
+        ParamByName('HEE_INT').AsDateTime         := TPIntervalo.Time;
+        ParamByName('HEE_DDS').AsInteger           := 4;
+        ParamByName('HEE_INI').AsDateTime          := TPQuiInicio.Time;
+        ParamByName('HEE_FIM').AsDateTime          := TPQuiFim.Time;
+        ExecSQL;
+        CadastraHorariosDeEntrega(DSE_EMP, 4, DSE_ID, DSE_VAR_UVA, ParamByName('HEE_INI').AsDateTime, ParamByName('HEE_FIM').AsDateTime );
+      end;
+      if QryDiaSemanaEntregaDSE_SEX.Value = 'T' then
+      begin
+        ParamByName('HEE_EMP').AsInteger          := DSE_EMP;
+        ParamByName('HEE_VAR_UVA').AsInteger      := DSE_VAR_UVA;
+        ParamByName('HEE_DTE').AsInteger          := DSE_ID;
+        ParamByName('HEE_INT').AsDateTime         := TPIntervalo.Time;
+        ParamByName('HEE_DDS').AsInteger           := 5;
+        ParamByName('HEE_INI').AsDateTime          := TPSexInicio.Time;
+        ParamByName('HEE_FIM').AsDateTime          := TPSexFim.Time;
+        ExecSQL;
+        CadastraHorariosDeEntrega(DSE_EMP, 5, DSE_ID, DSE_VAR_UVA, ParamByName('HEE_INI').AsDateTime, ParamByName('HEE_FIM').AsDateTime );
+      end;
+      if QryDiaSemanaEntregaDSE_SAB.Value = 'T' then
+      begin
+        ParamByName('HEE_EMP').AsInteger          := DSE_EMP;
+        ParamByName('HEE_VAR_UVA').AsInteger      := DSE_VAR_UVA;
+        ParamByName('HEE_DTE').AsInteger          := DSE_ID;
+        ParamByName('HEE_INT').AsDateTime         := TPIntervalo.Time;
+        ParamByName('HEE_DDS').AsInteger           := 6;
+        ParamByName('HEE_INI').AsDateTime          := TPSabInicio.Time;
+        ParamByName('HEE_FIM').AsDateTime          := TPSabFim.Time;
+        ExecSQL;
+        CadastraHorariosDeEntrega(DSE_EMP, 6, DSE_ID, DSE_VAR_UVA, ParamByName('HEE_INI').AsDateTime, ParamByName('HEE_FIM').AsDateTime );
+      end;
+      if QryDiaSemanaEntregaDSE_DOM.Value = 'T' then
+      begin
+        ParamByName('HEE_EMP').AsInteger          := DSE_EMP;
+        ParamByName('HEE_VAR_UVA').AsInteger      := DSE_VAR_UVA;
+        ParamByName('HEE_DTE').AsInteger          := DSE_ID;
+        ParamByName('HEE_INT').AsDateTime         := TPIntervalo.Time;
+        ParamByName('HEE_DDS').AsInteger           := 7;
+        ParamByName('HEE_INI').AsDateTime          := TPDomInicio.Time;
+        ParamByName('HEE_FIM').AsDateTime          := TPDomFim.Time;
+        ExecSQL;
+        CadastraHorariosDeEntrega(DSE_EMP, 7, DSE_ID, DSE_VAR_UVA, ParamByName('HEE_INI').AsDateTime, ParamByName('HEE_FIM').AsDateTime );
+      end;
+      ProgressBar1.Position := ProgressBar1.Position + 1;
+      Application.ProcessMessages;
     end;
   end;
 begin
@@ -284,11 +316,25 @@ end;
 
 procedure TFrmCadHorEntrega.FormShow(Sender: TObject);
 begin
-
   QryDiaSemanaEntrega.Close;
   QryDiaSemanaEntrega.ParamByName('DSE_EMP').AsInteger      := DSE_EMP;
   QryDiaSemanaEntrega.ParamByName('DSE_VAR_UVA').AsInteger  := DSE_VAR_UVA;
   QryDiaSemanaEntrega.Open;
+
+  if QryDiaSemanaEntrega.RecordCount = 0 then
+  begin
+    QryDiaSemanaEntrega.Edit;
+    QryDiaSemanaEntregaDSE_SEG.AsString := 'F';
+    QryDiaSemanaEntregaDSE_TER.AsString := 'F';
+    QryDiaSemanaEntregaDSE_QUA.AsString := 'F';
+    QryDiaSemanaEntregaDSE_QUI.AsString := 'F';
+    QryDiaSemanaEntregaDSE_SEX.AsString := 'F';
+    QryDiaSemanaEntregaDSE_SAB.AsString := 'F';
+    QryDiaSemanaEntregaDSE_DOM.AsString := 'F';
+    QryDiaSemanaEntregaDSE_EMP.AsInteger      := DSE_EMP;
+    QryDiaSemanaEntregaDSE_VAR_UVA.AsInteger  := DSE_VAR_UVA;
+    QryDiaSemanaEntrega.Post;
+  end;
 
   ContaSelecionado := 0;
 
