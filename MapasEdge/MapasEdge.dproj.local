@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/12/01 13:50:40.000.755,C:\Users\Eduardo\Documents\Embarcadero\Studio\Projects\Unit1.dfm=F:\Codigos\ProjetosDelphi\trunk\MapasEdge\uMapasEdge.dfm</Transaction>
+    <Transaction>2022/12/01 13:50:45.000.899,C:\Users\Eduardo\Documents\Embarcadero\Studio\Projects\Project1.dproj=F:\Codigos\ProjetosDelphi\trunk\MapasEdge\MapasEdge.dproj</Transaction>
+    <Transaction>2022/12/01 13:54:04.000.019,=F:\Codigos\ProjetosDelphi\trunk\MapasEdge\Lib.GoogleMaps.pas</Transaction>
+  </Transactions>
+</BorlandProject>
