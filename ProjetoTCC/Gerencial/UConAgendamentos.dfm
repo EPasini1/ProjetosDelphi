@@ -12,6 +12,7 @@ object FrmConAgengamentos: TFrmConAgengamentos
   Font.Style = []
   OldCreateOrder = False
   Position = poOwnerFormCenter
+  OnClose = FormClose
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -83,7 +84,8 @@ object FrmConAgengamentos: TFrmConAgengamentos
       'join HORARIOS_ENTREGA on HOE_ID = AGP_HOE'
       'join VARIEDADE_DE_UVA on VDU_ID = AGP_VAR_UVA'
       'join EMPRESA on EMP_ID = AGP_EMP'
-      'join PRODUTOR on PRO_ID = AGP_PRO')
+      'join PRODUTOR on PRO_ID = AGP_PRO'
+      'order by AGP_DIA, HOE_INI')
     Left = 160
     Top = 168
     object QryAgendamentosAGP_ID: TIntegerField

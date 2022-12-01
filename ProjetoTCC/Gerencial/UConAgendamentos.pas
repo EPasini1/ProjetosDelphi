@@ -29,6 +29,7 @@ type
     procedure BtnFecharClick(Sender: TObject);
     procedure BtnExcluirClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -66,7 +67,14 @@ begin
   Close;
 end;
 
-procedure TFrmConAgengamentos.FormShow(Sender: TObject);
+procedure TFrmConAgengamentos.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  FrmConAgengamentos := nil;
+  Action := caFree;
+end;
+
+Procedure TFrmConAgengamentos.FormShow(Sender: TObject);
 begin
   QryAgendamentos.Open;
 end;
