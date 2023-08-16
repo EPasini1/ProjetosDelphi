@@ -1,0 +1,60 @@
+
+h1#download {
+	color: #FF6633;
+	font-family: Microsoft Sans Serif;
+	font-weight: bold;
+	font-size: 16pt;
+}
+
+h2#download, h2#download a {
+	color: #151515;
+	font-family: Microsoft Sans Serif;
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+h3#download {
+	color: #FF6633;
+	font-family: Microsoft Sans Serif;
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+h4#download {
+	color: #151515;
+	font-family: Microsoft Sans Serif;
+	font-weight: bold;
+	font-size: 11pt;
+}
+
+.button{
+	margin:0;
+	background-color:#FFFFFF;
+	padding-left:12px;
+	color: #FF6600;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 9pt;
+}
+.button a{
+	display:block;
+	padding:9px 12px 9px 36px;
+	color:#000000;
+	text-decoration:none;
+	font-size:120%;
+	font-weight: bold;
+	background:transparent url(/images/down.gif) no-repeat left center;
+}
+.button a:hover{
+	text-decoration:underline;
+}
+
+#dwnVer2 {
+	font-family: Verdana;
+	font-size: 9pt;
+}
+
+#dwnDate2 {
+	font-family: Verdana;
+	font-size: 9pt;
+}

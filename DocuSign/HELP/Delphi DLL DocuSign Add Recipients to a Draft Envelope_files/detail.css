@@ -1,0 +1,71 @@
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1 {
+	/* font-family: verdana; */
+	font-size: 16pt;
+	font-weight: bold;
+	color: #333333;
+}
+
+h2 {
+	/* font-family: verdana; */
+	font-size: 12pt;
+	font-weight: bold;
+	color: #336699;
+}
+
+span#h2 {
+	/* font-family: verdana; */
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+p, a {
+	/* font-family: verdana; */
+	font-size: 9pt;
+	}
+	
+p#code {
+	font-family: courier;
+	font-size: 9pt;
+	color: #336600;
+	margin-left: 20px;
+	}
+
+pre {
+border: 1px dashed rgb(0, 0, 0); padding: 8px; background-color: rgb(240, 255, 240); font-family:Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, sans-serif; font-size: 13px; 
+}
+
+pre#excode {
+border: 1px dashed rgb(0, 0, 0); padding: 8px; background-color: rgb(255, 255, 255); font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, sans-serif; font-size: 13px; 
+}
+
+span#lit {
+	color: #A31515;
+	}
+	
+span#keyw {
+	color: #0000FF;
+	}
+	
+span#cmt {
+	color: #008000;
+	}
+	
+span#dtyp {
+	color: #2B91AF;
+	}
+	
+li, li#ex {
+	/* font-family: verdana; */
+	font-size: 10pt;
+	margin-top: 8px;
+	}
+	
+
+	

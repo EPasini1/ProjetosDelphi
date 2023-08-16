@@ -1,0 +1,16 @@
+{
+  "sub": "7973189b-b3cc-4197-8015-476a16586a4b",
+  "name": "Eduardo Pasini",
+  "given_name": "Eduardo",
+  "family_name": "Pasini",
+  "created": "2023-08-15T18:03:49.59",
+  "email": "pasinirs@gmail.com",
+  "accounts": [
+    {
+      "account_id": "f4e1d6fb-2a35-4dc4-9f81-887da6f8fe24",
+      "is_default": true,
+      "account_name": "Pasini Dev",
+      "base_uri": "https://demo.docusign.net"
+    }
+  ]
+}
